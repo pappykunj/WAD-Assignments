@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            table,th,td{
+                border:2px solid black;
+                border-collapse: collapse;
+                text-align: left;
+            }
+        </style>
         <title>Assignment1</title>
     </head>
     <body>
         <h1>
-            <u>Phishing</u>
+            <u> Phishing </u>
         </h1>
         <hr width="85%" align="left">
         <h6 align="right">Done by: </h6>
+        <table>
+            <caption><u><h3>Phishing</h3></u></caption>
+            <tr>
+                <th>Tool</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+            </tr>
+            <tr>
+                <td>Snort [4]</td>
+                <td>Network Level</td>
+                <td>Heuristic/rule engine</td>
+                <td>Good and detecting level attacks</td>
+                <td>Rules require manual adjastments.Does not look at content.</td>
+            </tr>
+            <tr>
+                <td>SpamAssassin [9]</td>
+                <td>Server Side Filter</td>
+                <td>Heuristic engine that uses email specific features</td>
+                <td>Good at dectecting email header spoofing</td>
+                <td>High false positives</td>
+            </tr>
+            <tr>
+                <td>PILFER [10]</td>
+                <td>Server Side Filter</td>
+                <td>Utilize 10 features extracted from email to classify</td>
+                <td>Better performance than spamAssasin.</td>
+                <td>Did not use content from body of the email.susceptible to short lived phis domains</td>
+            </tr>
+            <tr>
+                <td>SpoofGuard [30]</td>
+                <td>Client side Tool</td>
+                <td>Plug-in to a browser</td>
+                <td>Warns user if link points to phish site.</td>
+                <td>User do not pay attention to warnings.Not all email clients are browser based.</td>
+            </tr>
+            <tr>
+                <td>CatchingPhis [31]</td>
+                <td>Client Side Tool</td>
+                <td>Dectects fake website based on rendered images</td>
+                <td>Browser independent.Good results on small dara sets.</td>
+                <td>Processing time in high.Susceptible to screen resolution.</td>
+            </tr>
+    
+            <tr>
+                <td>CallingID [32],CloudMark [33],Netcraft [34], and FirePhis [35]</td>
+                <td>Client Side Tool</td>
+                <td>Utilizes blacklist of domains</td>
+                <td>Good for domains that employ domain level authentication.</td>
+                <td>Phish domain are short lived.Does not look at email content.</td>
+            </tr>
+            <tr>
+                <td>eBay Account Guard [36]</td>
+                <td>Client side Tool</td>
+                <td>Utilizes blacklist of eBay URLs</td>
+                <td>Proctects eBay users.</td>
+                <td>Specific website tool.</td>
+            </tr>
+            <tr>
+                <td>IE Phishing Filter</td>
+                <td>Client side Tool</td>
+                <td>Records specific user website visitng patterns.</td>
+                <td>Adapts to user website visit pattern.</td>
+                <td>Works only on internet explorer.</td>
+            </tr>
+    
+        </table>
         <h3>Tips to Prevent Phishing Attacks</h3> 
         <ol type ="1">
             <li>Know what a phishing scam looks like</li>
